@@ -1,0 +1,81 @@
+{
+  "title": "BAZODIAC External Atelier One-Shot",
+  "created_date": "2026-10-13",
+  "files": [
+    {
+      "path": "BAZODIAC_SOURCE_BRIEF.md",
+      "bytes": 6869,
+      "sha256": "7b4e3afd7971e73732b62d97075109531886b84c5a95055f80a8e0e545079a78"
+    },
+    {
+      "path": "EVALUATOR.md",
+      "bytes": 5157,
+      "sha256": "b1638f4ee04f11f607d33bb7dc35dfed372515d848e67b13789d8599ec2409aa"
+    },
+    {
+      "path": "PROMPT_ONE_SHOT.md",
+      "bytes": 28745,
+      "sha256": "e81b4fd7fbe48208b77ca78fffe9507302b8ec78af7609bd39680d4554e2d4f3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3765,
+      "sha256": "1845589c2df7faa910a0aa570c5f56c3ffb6174f4859bd9d0c426a93fe90262f"
+    },
+    {
+      "path": "REFERENCE_MECHANISMS.md",
+      "bytes": 5039,
+      "sha256": "bc08ca8dd84507f5f5e34553a7020ddd877df461ac62c240e323beeebc518f7b"
+    },
+    {
+      "path": "SOURCE_LINKS.md",
+      "bytes": 2310,
+      "sha256": "02b241b5f3546bd79fa3fb74b931ae0cc75ae799b93671aa6c8ede51e282cb30"
+    },
+    {
+      "path": "references/pitchdeck-example-1.jpg",
+      "bytes": 142901,
+      "sha256": "d49c9a28cbbe0f685d55b60aa413a6974cb0169638dc513bce98225cb6770b57"
+    },
+    {
+      "path": "references/pitchdeck-example-2.jpg",
+      "bytes": 144424,
+      "sha256": "57d0a36d465841868774adacf163ce0bd1f1e7f6b7b88929c4c0aa06ce07a4ec"
+    },
+    {
+      "path": "references/pitchdeck-example-3.jpg",
+      "bytes": 116943,
+      "sha256": "0bc84cc5ae611d20d6e2d3d9d1352a583604146b427fbf5a1695275d8644f906"
+    },
+    {
+      "path": "references/pitchdeck-example-4.jpg",
+      "bytes": 201647,
+      "sha256": "fffb75052513e2e16becf6c4ea4cf9d4f413a69046c66a7bbcd31ad9e5a97a04"
+    },
+    {
+      "path": "references/pitchdeck-example-5.jpg",
+      "bytes": 85958,
+      "sha256": "3e4883bf13b291a1b32038d23654e6de6329a2ad69f928ae4a5211c88d5c1616"
+    },
+    {
+      "path": "references/pitchdeck-example-6.jpg",
+      "bytes": 144190,
+      "sha256": "c268a2e78f78a811e6a604db8341fe3c586aba07e7a93e36b682e33db7d40f02"
+    },
+    {
+      "path": "references/pitchdeck-example-7.jpg",
+      "bytes": 75082,
+      "sha256": "59f05d51b0eb3cd965adb9a2993eb0653d3cbb560fcff894d9aad305d24442fe"
+    },
+    {
+      "path": "references/pitchdeck-example-8.jpg",
+      "bytes": 162464,
+      "sha256": "c91086957bbeb8b57ee51faa1a10ccce41c601b80ab8779e582f92d793dbdedb"
+    },
+    {
+      "path": "source_snapshots/bazodiac_deck_semantic_tokens.json",
+      "bytes": 1222,
+      "sha256": "46e6a148fa5b88f8d542a5c381b502f71490197e1d728e1f32761599c5fa4bb2"
+    }
+  ]
+}

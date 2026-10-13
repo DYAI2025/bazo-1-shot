@@ -1,0 +1,26 @@
+{
+  "source": "Public ETBZ BaZi Reading PDF Design System v2.1 (commit c4df8d4a32dc3a39c707b42ba2044a852af47f99)",
+  "source_url": "https://github.com/DYAI2025/ETBZ-design-system_v2.1final/blob/c4df8d4a32dc3a39c707b42ba2044a852af47f99/tokens.json",
+  "scope": "semantic subset / adaptation for Bazodiac deck, NOT a complete canonical theme",
+  "colors": {
+    "paper": "#F4EFE6",
+    "card": "#FBF8F2",
+    "ink": "#232628",
+    "teal_self": "#27454A",
+    "umber_shadow": "#7D4F33",
+    "gold_on_teal_only": "#E3C98F",
+    "wu_xing": {
+      "wood": {"glyph":"木", "hex":"#5C7C54"},
+      "fire": {"glyph":"火", "hex":"#A85448"},
+      "earth": {"glyph":"土", "hex":"#947028"},
+      "metal": {"glyph":"金", "hex":"#687074"},
+      "water": {"glyph":"水", "hex":"#446078"}
+    }
+  },
+  "rules": [
+    "Only apply Wu Xing colors when their actual elements are referenced; always include glyph and label.",
+    "Teal indicates self/day master in source material, not arbitrary deck success.",
+    "Umber shadow is contextual cost/tension, not a negative classification of people.",
+    "The broader presentation art direction is a new editorial/cinematic proposal; do not transplant the ETBZ PDF page template."
+  ]
+}
