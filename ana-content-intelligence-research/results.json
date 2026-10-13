@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "title": "ANA Content Acquisition & Intelligence",
+    "stichtag": "2026-10-13",
+    "language": "de",
+    "evidence_statuses": [
+      "TESTED_OK",
+      "TESTED_FAIL",
+      "FACT_VERIFIED",
+      "VENDOR_CLAIM",
+      "CONDITIONAL",
+      "UNKNOWN",
+      "BLOCKED",
+      "NOT_TESTED_ACCESS_BLOCKED"
+    ]
+  },
+  "verified_channels": {
+    "youtube": {
+      "url": "https://www.youtube.com/@anasavu",
+      "channel_id": "UCjzMuM_SuB5wkwFnN9ycaFg",
+      "status": "TESTED_OK",
+      "sample_posts": [
+        {
+          "id": "CUrmDg2seNA",
+          "title": "What I'm Packing for the Camino de Santiago",
+          "format": "longform_8min"
+        },
+        {
+          "id": "xfJScnaS-v4",
+          "title": "Camino de Santiago: day 4",
+          "format": "short",
+          "public_views": 261
+        },
+        {
+          "id": "Jwvh0YLIAJo",
+          "title": "Wish me luck!!! #caminodesantiago",
+          "format": "short",
+          "public_views": 905
+        }
+      ]
+    },
+    "tiktok": {
+      "url": "https://www.tiktok.com/@anasavu",
+      "direct_fetch": "TESTED_FAIL_HTTP_403",
+      "sample_posts": [
+        {
+          "id": "7472778649872239894",
+          "title": "Introducing myself in the 5 languages that I speak",
+          "date": "2025-02-18",
+          "likes": 1065,
+          "comments": 57,
+          "status": "FACT_VERIFIED_via_search_index"
+        }
+      ]
+    },
+    "instagram": {
+      "url": "https://www.instagram.com/anasavu/",
+      "status": "BLOCKED",
+      "contents": "UNKNOWN",
+      "note": "existence verified via YouTube/Substack bio crosslinks only"
+    },
+    "substack": {
+      "url": "https://anasavu.substack.com",
+      "name": "In-Between",
+      "publication_id": 6216941,
+      "payments_state": "enabled",
+      "status": "TESTED_OK",
+      "archive_post_count_at_stichtag": 3,
+      "posts": [
+        {
+          "date": "2026-10-11",
+          "title": "You Don't Need a Niche to Grow on Social Media in 2026",
+          "audience": "only_paid",
+          "wordcount": 2149,
+          "reactions": 2,
+          "comments": 0
+        },
+        {
+          "date": "2026-09-16",
+          "title": "What's in my backpack: slow travel edition",
+          "audience": "everyone",
+          "wordcount": 686,
+          "reactions": 9,
+          "comments": 0
+        },
+        {
+          "date": "2026-09-09",
+          "title": "Why I'm starting my Substack 1 week before I walk 280km to Santiago de Compostela",
+          "audience": "everyone",
+          "wordcount": 871,
+          "reactions": 13,
+          "comments": 4
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "Native exports (YouTube Studio/Takeout, TikTok Studio CSV, Meta Business Suite)",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "instagram"
+      ],
+      "access": "authorized_owner_login",
+      "real_media_file": true,
+      "comments": "CONDITIONAL",
+      "creator_analytics": true,
+      "export": [
+        "CSV",
+        "JSON",
+        "MP4"
+      ],
+      "cost": "free",
+      "maintenance": "platform",
+      "evidence": "FACT_VERIFIED",
+      "verdict": "sofort_geeignet_primary"
+    },
+    {
+      "name": "yt-dlp 2026.08.19",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "instagram_conditional"
+      ],
+      "access": "public_cli",
+      "real_media_file": true,
+      "comments": "youtube_only",
+      "creator_analytics": false,
+      "export": [
+        "MP4",
+        "info.json"
+      ],
+      "dedup": "--download-archive",
+      "cost": "free",
+      "maintenance": "FACT_VERIFIED pushed 2026-10-10, 197350 stars",
+      "evidence": "TESTED_OK_install; extraction NOT_TESTED_ACCESS_BLOCKED in sandbox",
+      "verdict": "sofort_geeignet"
+    },
+    {
+      "name": "Apify apify/instagram-scraper",
+      "platforms": [
+        "instagram"
+      ],
+      "access": "no_login_gui_api",
+      "real_media_file": "CONDITIONAL_cdn_url_may_expire",
+      "comments": true,
+      "creator_analytics": false,
+      "export": [
+        "JSON",
+        "CSV",
+        "Excel"
+      ],
+      "cost_usd_per_1000_results": "1.50-2.70 plan-dependent",
+      "evidence": "VENDOR_CLAIM",
+      "verdict": "bedingt_geeignet_test_first"
+    },
+    {
+      "name": "Apify Instagram Reel/Media Downloader",
+      "platforms": [
+        "instagram"
+      ],
+      "access": "no_login",
+      "real_media_file": "True_if_storage_enabled_else_~24h_url",
+      "cost_usd_per_1000_results": "from 3.80",
+      "evidence": "VENDOR_CLAIM",
+      "verdict": "bedingt_geeignet"
+    },
+    {
+      "name": "Apify clockworks/tiktok-scraper + TikTok Comments Scraper",
+      "platforms": [
+        "tiktok"
+      ],
+      "access": "no_login",
+      "real_media_file": "CONDITIONAL_download_separately",
+      "comments": true,
+      "cost_usd_per_1000": "videos 1.70; comments 0.50",
+      "evidence": "VENDOR_CLAIM",
+      "verdict": "bedingt_geeignet"
+    },
+    {
+      "name": "Instaloader",
+      "platforms": [
+        "instagram"
+      ],
+      "access": "own_login_required",
+      "real_media_file": true,
+      "comments": true,
+      "cost": "free",
+      "maintenance": "FACT_VERIFIED pushed 2026-10-12",
+      "risk": "account_ban_with_main_account",
+      "verdict": "ungeeignet_main_account"
+    },
+    {
+      "name": "gallery-dl",
+      "platforms": [
+        "instagram",
+        "tiktok",
+        "300+ sites"
+      ],
+      "access": "browser_cookies_equals_login",
+      "real_media_file": true,
+      "comments": false,
+      "cost": "free",
+      "maintenance": "FACT_VERIFIED pushed 2026-10-09",
+      "verdict": "bedingt_geeignet_same_risk_as_instaloader"
+    },
+    {
+      "name": "ScrapeCreators / EnsembleData / Bright Data",
+      "platforms": [
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "access": "api_key_developer",
+      "cost": "ScrapeCreators $47/25000 credits; EnsembleData ~$100/mo; Bright Data from $1.50/1000 records",
+      "evidence": "VENDOR_CLAIM prices checked 2026-07/08",
+      "verdict": "bedingt_geeignet_only_architecture_C"
+    },
+    {
+      "name": "faster-whisper (Whisper large-v3/turbo)",
+      "platforms": [
+        "local_files"
+      ],
+      "transcription": "timestamps_multilingual",
+      "vision": false,
+      "cost": "free_local; OpenAI Whisper API alternative $0.006/min",
+      "maintenance": "FACT_VERIFIED pushed 2026-10-13",
+      "evidence": "installed; model download NOT_TESTED_ACCESS_BLOCKED in sandbox",
+      "verdict": "sofort_geeignet"
+    },
+    {
+      "name": "MacWhisper",
+      "platforms": [
+        "macOS local files"
+      ],
+      "transcription": "timestamps_gui_batch",
+      "cost": "free; Pro $69 one-time",
+      "evidence": "VENDOR_CLAIM price checked 2026-10-08",
+      "verdict": "sofort_geeignet_if_macOS_no_terminal"
+    },
+    {
+      "name": "FFmpeg + PySceneDetect + Tesseract OCR",
+      "platforms": [
+        "local_files"
+      ],
+      "vision": "scenes_keyframes_onscreen_text_no_action_understanding",
+      "cost": "free",
+      "maintenance": "FACT_VERIFIED PySceneDetect pushed 2026-10-12",
+      "verdict": "sofort_geeignet_component"
+    },
+    {
+      "name": "Twelve Labs Marengo/Pegasus (alt: Gemini Video API)",
+      "platforms": [
+        "cloud_upload"
+      ],
+      "vision": "true_multimodal_video_understanding",
+      "cost_usd_per_min": "index 0.042 + analyze 0.0292; free tier 600 min",
+      "evidence": "VENDOR_CLAIM rate card 2026-09-11",
+      "verdict": "bedingt_geeignet_sample_only"
+    },
+    {
+      "name": "Metricool",
+      "platforms": [
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "access": "authorized_connection",
+      "creator_analytics": true,
+      "cost": "free 1 brand/30d; Starter ~$18-20/mo",
+      "verdict": "bedingt_geeignet_architecture_C"
+    },
+    {
+      "name": "n8n / Make",
+      "platforms": [
+        "orchestration"
+      ],
+      "verdict": "zurueckstellen_no_proven_need"
+    },
+    {
+      "name": "sc1341/InstagramOSINT",
+      "platforms": [
+        "instagram"
+      ],
+      "maintenance": "archived=true last push 2024-06-08 FACT_VERIFIED",
+      "verdict": "ungeeignet_blockiert_negative_example"
+    }
+  ],
+  "varianten_ohne_api": {
+    "A_no_own_api_programming": "realistic_recommended",
+    "B_no_official_social_api": "realistic_with_instagram_limits",
+    "C_fully_automatic_no_login": "BLOCKED: instagram login wall, platform bot protection (403 tested), creator analytics only behind owner login, ToS"
+  },
+  "stacks": {
+    "A_sofort": {
+      "tools": [
+        "original files",
+        "native exports",
+        "yt-dlp",
+        "faster-whisper/MacWhisper",
+        "FFmpeg+PySceneDetect+Tesseract",
+        "SQLite+Google Sheets"
+      ],
+      "setup": "0.5-1 day",
+      "running": "~30 min/month",
+      "cost": "0 EUR (optional MacWhisper $69 once)"
+    },
+    "B_hybrid": {
+      "adds": [
+        "Apify scheduled metadata/comments",
+        "multimodal sample analysis"
+      ],
+      "setup": "+0.5 day",
+      "running": "~1 h/month",
+      "cost": "Apify Starter ~$19-29/mo + <$5/mo data at assumed scale"
+    },
+    "C_dauerhaft": {
+      "adds": [
+        "YouTube Data API (10000 quota/day)",
+        "Instagram Graph API (app review)",
+        "Metricool"
+      ],
+      "setup": "3-10 days + reviews",
+      "running": "2-4 h/month",
+      "condition": "only after pilot proves value"
+    }
+  },
+  "cost_scenarios_usd": {
+    "note": "hypothetical volumes from brief, prices verified 2026-10-09..13, formulas in REPORT.md S10",
+    "pilot_30posts_30min_100comments": {
+      "apify_metadata_comments": "<=0.50",
+      "transcription_local": 0,
+      "multimodal_sample": "0 free tier (else 2.14)",
+      "platform_plan": "0 free $5 credit"
+    },
+    "basis_300posts_300min_1000comments": {
+      "apify": "<=4.70 + Starter plan",
+      "transcription_local": 0,
+      "whisper_api_alternative": 1.8
+    },
+    "archiv_1500posts_1500min_5000comments": {
+      "apify": "<=23.40 + plan",
+      "transcription_local": 0,
+      "whisper_api_alternative": 9.0
+    }
+  },
+  "scoring_0_5": {
+    "weights": {
+      "time_to_first_usable_content": 0.2,
+      "source_coverage": 0.2,
+      "completeness": 0.15,
+      "semantic_usability": 0.15,
+      "reliability": 0.1,
+      "total_cost": 0.1,
+      "operating_effort": 0.1
+    },
+    "A_sofort": {
+      "scores": [
+        5,
+        3,
+        4,
+        4,
+        4,
+        5,
+        4
+      ],
+      "note": "coverage 3: instagram gap until Apify test; hard gates pass"
+    },
+    "B_hybrid": {
+      "scores": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ],
+      "note": "vendor-claim dependence lowers reliability"
+    },
+    "C_dauerhaft": {
+      "scores": [
+        1,
+        5,
+        5,
+        4,
+        3,
+        2,
+        2
+      ],
+      "note": "best coverage, worst time-to-value; reviews are blockers"
+    }
+  },
+  "substack_candidates": [
+    {
+      "title": "What social media actually pays for (Money & Work series)",
+      "sources": [
+        "Substack Money & Work page",
+        "Substack 2026-10-11 paid post"
+      ],
+      "blocker": "real income numbers SOURCE_NEEDED from Ana only",
+      "demand_test": "Substack Note question, count qualified replies/subscriptions 7d",
+      "discard_if": "<10 qualified reactions or Ana declines sharing numbers"
+    },
+    {
+      "title": "Camino Portugues: honest 14-day diary (Slow Travel Diaries)",
+      "sources": [
+        "Substack 2026-09-09",
+        "YT Camino Shorts series (>=5)",
+        "YT CUrmDg2seNA packing longform"
+      ],
+      "blocker": "stage/cost notes from Ana (30 min voice note)",
+      "demand_test": "Note asking planning questions, cluster replies",
+      "discard_if": "no planning questions"
+    },
+    {
+      "title": "Slow-travel packing system (living guide)",
+      "sources": [
+        "Substack 2026-09-16",
+        "YT packing video (crosspost check via sha256 in pilot)"
+      ],
+      "blocker": "quarterly 20-min update from Ana",
+      "demand_test": "restack as Note with reply CTA, count link clicks",
+      "discard_if": "~0 link clicks after 2 restacks"
+    }
+  ],
+  "data_model_tables": [
+    "posts",
+    "creatives",
+    "assets",
+    "performance_snapshots",
+    "transcript_segments",
+    "visual_segments",
+    "audience_signals",
+    "topic_clusters",
+    "reuse_candidates"
+  ],
+  "hard_rules": [
+    "never estimate missing analytics and present as observed",
+    "no instagram main-account login scrapers",
+    "no circumvention of login/CAPTCHA/rate limits",
+    "comments stored anonymized only",
+    "no publication without Ana approval",
+    "cluster without post IDs is not a finding"
+  ],
+  "blockers": [
+    "instagram full data: BLOCKED without Apify test or owner export",
+    "creator analytics: SOURCE_NEEDED (Ana exports only)",
+    "ana total post/video volume: UNKNOWN",
+    "apify real-file/comment completeness: NOT_TESTED (needs authorized free-tier test)"
+  ],
+  "next_step": "Ana exports native analytics + shares originals folder + approves 20-post list; then run scripts/pilot_pipeline.py (REPORT.md S11), success gate >=17/20 real files, then one source-cited Camino draft for her approval."
+}
